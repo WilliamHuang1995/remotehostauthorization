@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 80;
+const port = process.env.PORT || 80
 
 app.post('/api/v1/authorization', (req, res) => {
   res.json({
