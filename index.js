@@ -3,8 +3,7 @@ const app = express();
 const port = process.env.PORT || 80
 
 app.post('/api/v1/authorization', (req, res) => {
-  console.log(request.headers)
-  console.log(request.body)
+  console.log(req.body)
   res.json({
     "balances": {
       "currency_code": "SGD",
@@ -17,8 +16,7 @@ app.post('/api/v1/authorization', (req, res) => {
 });
 
 app.post('/api/v1/webhook', (req, res) => {
-  console.log(request.headers)
-  console.log(request.body)
+  console.log(req.body)
   res.status(200).send();
 });
 
